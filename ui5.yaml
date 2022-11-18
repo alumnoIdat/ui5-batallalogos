@@ -27,11 +27,39 @@ server:
     - name: ui5-middleware-livetranspile
       afterMiddleware: compression
       configuration:
-        transpileAsync: true
+        excludePatterns:
+          - '**/thirdparty/'
 builder:
   customTasks:
     - name: ui5-task-transpile
       afterTask: replaceVersion
       configuration:
         removeConsoleStatements: true
-        transpileAsync: true
+        excludePatterns:
+          - '**/thirdparty/**'
+---
+specVersion: '2.1'
+kind: extension
+type: project-shim
+metadata:
+  name: thirdparty # this can be your project shim name
+shims:
+  configurations:
+    lodash: # name as defined in package.json
+      specVersion: '2.1'
+      type: module # Use module type
+      metadata:
+        name: lodash
+      resources:
+        configuration:
+          paths:
+            /resources/thirdparty/lodash/: ''  # location where modules are stored
+    moment: # name as defined in package.json
+      specVersion: '2.1'
+      type: module # Use module type
+      metadata:
+        name: moment
+      resources:
+        configuration:
+          paths:
+            /resources/thirdparty/moment/: ''  # location where modules are stored
