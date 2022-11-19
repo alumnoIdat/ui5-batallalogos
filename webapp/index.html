@@ -6,22 +6,42 @@
     <title>UI5 Boilerplate</title>
     <link rel="shortcut icon" href="/favicon.ico" />
 
+    <!-- data-sap-ui-oninit="module:sap/ui/core/ComponentSupport" -->
     <script
       id="sap-ui-bootstrap"
       src="/resources/sap-ui-core.js"
       data-sap-ui-resourceroots='{
             "ui5boilerplate": "./"
           }'
-      data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
       data-sap-ui-compatVersion="edge"
       data-sap-ui-async="true"
       data-sap-ui-frameOptions="trusted"
       data-sap-ui-theme="sap_fiori_3"
       data-sap-ui-logLevel="Fatal"
     ></script>
+
+    <script>
+      sap.ui.getCore().attachInit(function () {
+        sap.ui.require(
+          ['sap/ui/core/Component', 'sap/ui/core/ComponentContainer'],
+          function (Component, ComponentContainer) {
+            sap.ui
+              .component({
+                name: 'ui5boilerplate',
+                async: true,
+              })
+              .then(function (oComponent) {
+                new ComponentContainer({
+                  component: oComponent,
+                }).placeAt('root');
+              });
+          }
+        );
+      });
+    </script>
   </head>
 
-  <body class="sapUiBody">
+  <!-- <body class="sapUiBody">
     <div
       data-sap-ui-component
       data-name="ui5boilerplate"
@@ -29,5 +49,7 @@
       data-handle-validation="true"
       data-settings='{"id" : "ui5boilerplate"}'
     ></div>
-  </body>
+  </body> -->
+
+  <body class="sapUiBody" id="root" role="application"></body>
 </html>
