@@ -7,8 +7,8 @@ resources:
     paths:
       webapp: webapp
 framework:
-  name: OpenUI5
-  version: '1.90.1'
+  name: SAPUI5
+  version: '1.84.1'
   libraries:
     - name: sap.m
     - name: sap.ui.core
