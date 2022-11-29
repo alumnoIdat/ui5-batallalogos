@@ -27,7 +27,8 @@ server:
     - name: ui5-middleware-livetranspile
       afterMiddleware: compression
       configuration:
-        transpileAsync: true
+        excludePatterns:
+          - '**/thirdparty/'
 builder:
   customTasks:
     - name: ui5-task-transpile

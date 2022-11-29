@@ -15,7 +15,7 @@
     "test": "ui5 serve -o test/mockServer.html",
     "serve-dist": "ui5 serve --config ui5-dist.yaml -o",
     "build": "ui5 build self-contained --clean-dest",
-    "build-all": "ui5 build self-contained -a --clean-dest --include-task=buildThemes",
+    "build-all": "ui5 build self-contained -a --clean-dest",
     "build-preload": "ui5 build --clean-dest",
     "build-preload-all": "ui5 build -a --clean-dest",
     "lint": "eslint webapp"
