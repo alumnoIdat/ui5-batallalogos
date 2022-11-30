@@ -1,11 +1,11 @@
 sap.ui.define(
   [
-    'ui5boilerplate/controller/Base.controller',
+    'sap/trial/firevswatertrial/controller/Base.controller',
     'thirdparty/lodash/lodash',
     'thirdparty/moment/moment',
   ],
   (BaseController) => {
-    return BaseController.extend('ui5boilerplate.controller.Home', {
+    return BaseController.extend('sap.trial.firevswatertrial.controller.Home', {
       onInit() {
         _.flatten(['1', ['2', '3'], ['4', '5', '6']]);
         moment().format('MMM Do YY');

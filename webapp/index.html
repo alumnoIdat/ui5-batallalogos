@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UI5 Boilerplate</title>
+    <title>UI5 Fire vs Water</title>
     <link rel="shortcut icon" href="/favicon.ico" />
 
     <script
@@ -16,17 +16,22 @@
       data-sap-ui-frameOptions="trusted"
       data-sap-ui-logLevel="Fatal"
       data-sap-ui-resourceroots='{
-            "ui5boilerplate": "./"
+            "sap.trial.firevswatertrial": "./"
           }'
     ></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
   </head>
 
   <body class="sapUiBody">
     <div
       data-sap-ui-component
-      data-name="ui5boilerplate"
+      data-name="sap.trial.firevswatertrial"
       data-id="container"
-      data-settings='{"id" : "ui5boilerplate"}'
+      data-settings='{"id" : "firevswatertrial"}'
     ></div>
   </body>
 </html>
