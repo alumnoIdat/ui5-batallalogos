@@ -11,6 +11,6 @@ modules:
     path: ./dist
     parameters:
       html5-app-name: 'boilerplatepruebahtml5'
-      html5-app-display-name: 'Boiler plate HTML5'
+      html5-app-display-name: 'Boiler Plate HTML5'
       minimum-sapui5-version: 1.44.10
       html5-app-version: 1.0.0-${timestamp}
